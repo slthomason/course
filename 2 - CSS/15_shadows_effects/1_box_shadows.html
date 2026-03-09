@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #example1 {
+            border: 1px solid;
+            padding: 10px;
+            box-shadow: 5px 10px;
+        }
+
+        #example2 {
+            border: 1px solid;
+            padding: 10px;
+            box-shadow: 5px 10px #888888;
+        }
+
+        #example3 {
+            border: 1px solid;
+            padding: 10px;
+            box-shadow: 5px 10px red;
+        }
+
+        #example4 {
+            width: 300px;
+            height: 100px;
+            padding: 15px;
+            background-color: coral;
+            box-shadow: 10px 10px 5px lightblue;
+        }
+
+        #example5 {
+            width: 300px;
+            height: 100px;
+            padding: 15px;
+            background-color: coral;
+            box-shadow: 10px 10px 5px 12px lightblue;
+        }
+
+        #example6 {
+            width: 300px;
+            height: 100px;
+            padding: 15px;
+            background-color: coral;
+            box-shadow: 10px 10px 5px lightblue inset;
+        }
+
+        #example7 {
+            border: 1px solid;
+            padding: 10px;
+            box-shadow: 5px 5px 8px blue, 10px 10px 8px red, 15px 15px 8px green;
+            margin: 20px;
+        }
+
+        div.image-card {
+            width: 250px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            text-align: center;
+        }
+
+        div.container {
+            padding: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>The box-shadow Property</h1>
+    <p>The box-shadow property defines the shadow of an element:</p>
+
+    <h2>box-shadow: 5px 10px:</h2>
+    <div id="example1">
+        <p>A div element with a shadow. The first value is the horizontal offset and the second value is the vertical
+            offset. The shadow color will be inherited from the text color.</p>
+    </div>
+
+    <h2>box-shadow: 5px 10px #888888:</h2>
+    <div id="example2">
+        <p>You can also define the color of the shadow. Here the shadow color is grey.</p>
+    </div>
+
+    <h2>box-shadow: 5px 10px red:</h2>
+    <div id="example3">
+        <p>A red shadow.</p>
+    </div>
+
+    <div id="example4">A div element with a 5px blurred, lightblue box-shadow.</div>
+
+    <div id="example5">A div element with a blurred, lightblue box-shadow, with a spread radius of 12px.</div>
+
+    <div id="example6">A div element with a blurred, lightblue, inset box-shadow.</div>
+
+    <div id="example7">
+        <h2>Multiple shadows with blur effect</h2>
+        <p>box-shadow: 5px 5px 8px blue, 10px 10px 8px red, 15px 15px 8px green:</p>
+    </div>
+
+    <div class="image-card">
+        <img src="channels4_profile.jpg" alt="startup Hakk" style="width:100%">
+        <div class="container">
+            <p>StartupHakk</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

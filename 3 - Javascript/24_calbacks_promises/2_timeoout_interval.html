@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // Timeout Examples
+        const myTimeout = setTimeout(myGreeting, 5000);
+
+        function myGreeting() {
+            console.log("Happy Birthday!")
+        }
+
+        const myTimeout2 = setTimeout(myGreeting,
+            5000); // only one message will be printed. cause clear timeout will be called.
+        clearTimeout(myTimeout2);
+
+
+        // Interval Examples
+        function myTimer1() {
+            console.log("Interval cb example 1 -> Happy Birthday!")
+        }
+
+        setInterval(myTimer1, 1000);
+
+
+        function myTimer2() {
+            console.log("Interval cb example 2 -> Happy Birthday!")
+        }
+
+        const myInterval = setInterval(myTimer2, 1000);
+
+        setTimeout(() => {
+            clearInterval(myInterval)
+        }, 5000);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

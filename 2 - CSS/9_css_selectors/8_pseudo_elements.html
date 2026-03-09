@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p::first-letter {
+            color: #ff0000;
+        }
+
+        p::first-line {
+            color: #0000ff;
+        }
+
+        h1::before {
+            content: "M_ ";
+        }
+
+        h1::after {
+            content: " _O";
+        }
+
+        div.before_image::before {
+            content: url(startup_hakk_logo.png);
+        }
+
+        .with_marker ::marker {
+            color: red;
+            font-size: 23px;
+        }
+
+        .with_selection::selection {
+            color: red;
+            background: yellow;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p>You can use the ::first-letter pseudo-element to add a special effect to the first character of a text!</p>
+
+    <p>You can combine the ::first-letter and ::first-line pseudo-elements to add a special effect to the first letter
+        and the first line of a text!</p>
+
+    <h1>This line will have M at th begining and O at the end</h1>
+
+    <h2>This line will have M at th begining and O at the end</h2>
+
+    <div class="before_image">
+        before pseudo example with image
+    </div>
+
+    <ul>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ul>
+
+    <ul class="with_marker">
+        <li>First</li>
+        <li>Second</li>
+        <li>Third</li>
+    </ul>
+
+
+    <div class="with_selection">
+        select some content in the block. Notice a change in Selected text color 
+    </div>
+
+     <div>
+        select some content in the block. No change in the selected text
+     </div>
+</body>
+
+</html>

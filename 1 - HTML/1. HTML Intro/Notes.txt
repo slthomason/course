@@ -1,0 +1,17 @@
+1. Html Structure
+    a. DOCTYPE
+    b. lang="en"
+    c. head
+    d. title
+    e. body
+
+2. Headings
+    a. format
+    b. Differnt headings 1 to 6
+
+3. Tags
+    a. self closing Tag
+    b. Block Element
+    c. Inline Element
+
+

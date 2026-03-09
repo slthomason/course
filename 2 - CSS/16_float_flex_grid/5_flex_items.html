@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #example1 .flex-container {
+            display: flex;
+            align-items: stretch;
+            background-color: #f1f1f1;
+        }
+
+        #example1 .flex-container>div {
+            background-color: DodgerBlue;
+            color: white;
+            width: 100px;
+            margin: 10px;
+            text-align: center;
+            line-height: 75px;
+            font-size: 30px;
+        }
+
+        #example2 .flex-container {
+            display: flex;
+            align-items: stretch;
+            background-color: #f1f1f1;
+        }
+
+        #example2 .flex-container>div {
+            background-color: DodgerBlue;
+            color: white;
+            margin: 10px;
+            text-align: center;
+            line-height: 75px;
+            font-size: 30px;
+        }
+
+        #example3 .flex-container {
+            display: flex;
+            align-items: stretch;
+            background-color: #f1f1f1;
+        }
+
+        #example3 .flex-container>div {
+            background-color: DodgerBlue;
+            color: white;
+            width: 100px;
+            margin: 10px;
+            text-align: center;
+            line-height: 75px;
+            font-size: 30px;
+        }
+
+        #example4 .flex-container {
+            display: flex;
+            align-items: stretch;
+            background-color: #f1f1f1;
+        }
+
+        #example4 .flex-container>div {
+            background-color: DodgerBlue;
+            color: white;
+            width: 100px;
+            margin: 10px;
+            text-align: center;
+            line-height: 75px;
+            font-size: 30px;
+        }
+
+        #example5 .flex-container {
+            display: flex;
+            align-items: stretch;
+            background-color: #f1f1f1;
+        }
+
+        #example5 .flex-container>div {
+            background-color: DodgerBlue;
+            color: white;
+            width: 100px;
+            margin: 10px;
+            text-align: center;
+            line-height: 75px;
+            font-size: 30px;
+        }
+
+        #example6 .flex-container {
+            display: flex;
+            height: 200px;
+            background-color: #f1f1f1;
+        }
+
+        #example6 .flex-container>div {
+            background-color: DodgerBlue;
+            color: white;
+            width: 100px;
+            margin: 10px;
+            text-align: center;
+            line-height: 75px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="example1">
+        <p>Use the order property to sort the flex items as you like:</p>
+
+        <div class="flex-container">
+            <div style="order: 3">1</div>
+            <div style="order: 2">2</div>
+            <div style="order: 4">3</div>
+            <div style="order: 1">4</div>
+        </div>
+
+    </div>
+    <div id="example2">
+        <p>Make the third flex item grow eight times faster than the other flex items:</p>
+
+        <div class="flex-container">
+            <div style="flex-grow: 1">1</div>
+            <div style="flex-grow: 1">2</div>
+            <div style="flex-grow: 8">3</div>
+        </div>
+
+    </div>
+    <div id="example3">
+        <p>Do not let the third flex item shrink as much as the other flex items:</p>
+
+        <div class="flex-container">
+            <div>1</div>
+            <div>2</div>
+            <div style="flex-shrink: 0">3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+        </div>
+    </div>
+    <div id="example4">
+        <p>Set the initial length of the third flex item to 200 pixels:</p>
+
+        <div class="flex-container">
+            <div>1</div>
+            <div>2</div>
+            <div style="flex-basis:200px">3</div>
+            <div>4</div>
+        </div>
+
+    </div>
+    <div id="example5">
+        <p>Make the third flex item not growable (0), not shrinkable (0), and with an initial length of 200 pixels:</p>
+
+        <div class="flex-container">
+            <div>1</div>
+            <div>2</div>
+            <div style="flex: 0 0 200px">3</div>
+            <div>4</div>
+        </div>
+    </div>
+    <div id="example6">
+        <p>The "align-self: center;" aligns the selected flex item in the middle of the container:</p>
+
+        <div class="flex-container">
+            <div>1</div>
+            <div>2</div>
+            <div style="align-self: center">3</div>
+            <div>4</div>
+            <div style="align-self: flex-start">5</div>
+            <div style="align-self: flex-end">6</div>
+        </div>
+    </div>
+</body>
+
+</html>

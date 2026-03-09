@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function printMessage() {
+            console.log("hello, How are you?"); // The function print message
+        }
+
+        function multiply(p1, p2) {
+            console.log(p1 * p2); // The function print the product of p1 and p2
+        }
+
+        function multiplyWithReturn(p1, p2) {
+            return p1 * p2; // The function returns the product of p1 and p2
+        }
+
+        var output = multiplyWithReturn(20, 5);
+
+        // code here can NOT use carName
+        function localVariableExample() {
+            let carName = "Volvo";
+            // code here CAN use carName
+        }
+        // code here can NOT use carName
+        localVariableExample();
+
+        // expression example
+        const multiplyExpr = function (a, b) {
+            return a * b
+        };
+        console.log(multiplyExpr(4, 3));
+
+        // Function() Constructor
+        const myFunction = new Function("a", "b", "return a * b");
+        console.log(myFunction(4, 3));
+
+
+        (function () {
+            console.log("Hello!!"); // I will invoke myself
+        })();
+
+
+        // ES5 function notation
+        var multiEx5 = function (x, y) {
+            return x * y;
+        }
+
+        // ES6 function notation
+        const multiEx6 = (x, y) => x * y;
+
+
+        function multiplyDefault(p1, p2 = 20) {
+            console.log(p1 * p2); // The function print the product of p1 and p2
+        }
+
+        // arguments example
+        function findMax() {
+            debugger;
+            let max = -1;
+            for (let i = 0; i < arguments.length; i++) {
+                if (arguments[i] > max) {
+                    max = arguments[i];
+                }
+            }
+            return max;
+        }
+
+        findMax(1, 123, 500, 115, 44, 88);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

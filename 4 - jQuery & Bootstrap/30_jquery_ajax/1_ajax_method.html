@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <!-- using CDN jquery file -->
+     <script src="https://code.jquery.com/jquery-3.6.0.js"
+         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <script>
+        // Assign handlers immediately after making the request,
+        // and remember the jqXHR object for this request
+        var jqxhr = $.ajax("https://api.github.com/users")
+            .done(function () {
+                alert("success");
+            })
+            .fail(function () {
+                alert("error");
+            })
+            .always(function () {
+                alert("complete");
+            });
+
+        // Perform other work here ...
+
+        // Set another completion function for the request above
+        jqxhr.always(function () {
+            alert("second complete");
+        });
+
+
+        // example two
+        $.ajax({
+                method: "POST",
+                url: "https://api.github.com/users",
+                data: {
+                    name: "John",
+                    location: "Boston"
+                }
+            })
+            .done(function (msg) {
+                //parse the data from msg for something useful
+                alert("Data Saved: " + msg);
+            });
+
+        //short hand methods
+        jQuery.get("https://api.github.com/users", {
+                name: "John",
+                location: "Boston"
+            }, function (msg) {
+                //parse the data from msg for something useful
+                alert("Data Saved: " + msg);
+            });
+
+        jQuery.post("https://api.github.com/users", {
+                name: "John",
+                location: "Boston"
+            }, function (msg) {
+                //parse the data from msg for something useful
+                alert("Data Saved: " + msg);
+            });
+    </script>
+</body>
+
+</html>

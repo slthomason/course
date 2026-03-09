@@ -1,0 +1,80 @@
+2022-09-29 18:17:54.028 -04:00 [INF] Now listening on: https://localhost:7167
+2022-09-29 18:17:54.130 -04:00 [INF] Now listening on: http://localhost:5167
+2022-09-29 18:17:54.145 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-29 18:17:54.148 -04:00 [INF] Hosting environment: Development
+2022-09-29 18:17:54.150 -04:00 [INF] Content root path: C:\Users\Admin\Downloads\section7\9_logging\after\Demo\
+2022-09-29 18:18:09.319 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/index.html - -
+2022-09-29 18:18:10.211 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/index.html - - - 200 - text/html;charset=utf-8 895.3790ms
+2022-09-29 18:18:10.442 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - -
+2022-09-29 18:18:10.477 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - - - 200 11978 application/javascript;+charset=utf-8 35.0567ms
+2022-09-29 18:18:11.113 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - -
+2022-09-29 18:18:11.492 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 378.7968ms
+2022-09-29 18:18:36.571 -04:00 [INF] Request starting HTTP/1.1 GET https://localhost:7167/api/Users application/json 47
+2022-09-29 18:18:46.028 -04:00 [INF] Entity Framework Core 6.0.9 initialized 'DataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.9' with options: None
+2022-09-29 18:19:00.668 -04:00 [INF] Executed DbCommand (1,193ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+2022-09-29 18:19:00.994 -04:00 [INF] Executing endpoint 'Demo.Controllers.UsersController.Get (Demo)'
+2022-09-29 18:19:01.045 -04:00 [INF] Route matched with {action = "Get", controller = "Users"}. Executing controller action with signature System.Collections.Generic.List`1[Entities.User] Get() on controller Demo.Controllers.UsersController (Demo).
+2022-09-29 18:19:01.188 -04:00 [INF] Executed DbCommand (100ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Username]
+FROM [Users] AS [u]
+2022-09-29 18:19:01.207 -04:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Entities.User, Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-09-29 18:19:01.358 -04:00 [INF] Executed action Demo.Controllers.UsersController.Get (Demo) in 281.1802ms
+2022-09-29 18:19:01.388 -04:00 [INF] Executed endpoint 'Demo.Controllers.UsersController.Get (Demo)'
+2022-09-29 18:19:01.401 -04:00 [INF] Request finished HTTP/1.1 GET https://localhost:7167/api/Users application/json 47 - 200 - application/json;+charset=utf-8 24829.9351ms
+2022-09-29 18:19:49.967 -04:00 [INF] Request starting HTTP/1.1 POST https://localhost:7167/api/Users application/json 47
+2022-09-29 18:19:49.989 -04:00 [INF] Entity Framework Core 6.0.9 initialized 'DataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.9' with options: None
+2022-09-29 18:19:50.022 -04:00 [INF] Executed DbCommand (20ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+2022-09-29 18:19:50.036 -04:00 [INF] Executing endpoint 'Demo.Controllers.UsersController.Post (Demo)'
+2022-09-29 18:19:50.083 -04:00 [INF] Route matched with {action = "Post", controller = "Users"}. Executing controller action with signature Void Post(Contracts.CreateUserRequest) on controller Demo.Controllers.UsersController (Demo).
+2022-09-29 18:19:50.318 -04:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2022-09-29 18:19:50.359 -04:00 [INF] Executed action Demo.Controllers.UsersController.Post (Demo) in 269.0609ms
+2022-09-29 18:19:50.369 -04:00 [INF] Executed endpoint 'Demo.Controllers.UsersController.Post (Demo)'
+2022-09-29 18:19:50.374 -04:00 [INF] Request finished HTTP/1.1 POST https://localhost:7167/api/Users application/json 47 - 400 - application/problem+json;+charset=utf-8 406.9502ms
+2022-09-29 18:20:04.668 -04:00 [INF] Request starting HTTP/1.1 GET https://localhost:7167/api/Users application/json 47
+2022-09-29 18:20:04.831 -04:00 [INF] Entity Framework Core 6.0.9 initialized 'DataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.9' with options: None
+2022-09-29 18:20:04.840 -04:00 [INF] Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+2022-09-29 18:20:04.854 -04:00 [INF] Executing endpoint 'Demo.Controllers.UsersController.Get (Demo)'
+2022-09-29 18:20:04.859 -04:00 [INF] Route matched with {action = "Get", controller = "Users"}. Executing controller action with signature System.Collections.Generic.List`1[Entities.User] Get() on controller Demo.Controllers.UsersController (Demo).
+2022-09-29 18:20:04.872 -04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Username]
+FROM [Users] AS [u]
+2022-09-29 18:20:04.884 -04:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Entities.User, Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-09-29 18:20:04.888 -04:00 [INF] Executed action Demo.Controllers.UsersController.Get (Demo) in 17.8028ms
+2022-09-29 18:20:04.892 -04:00 [INF] Executed endpoint 'Demo.Controllers.UsersController.Get (Demo)'
+2022-09-29 18:20:04.899 -04:00 [INF] Request finished HTTP/1.1 GET https://localhost:7167/api/Users application/json 47 - 200 - application/json;+charset=utf-8 231.8756ms
+2022-09-29 18:21:47.578 -04:00 [INF] Now listening on: https://localhost:7167
+2022-09-29 18:21:47.765 -04:00 [INF] Now listening on: http://localhost:5167
+2022-09-29 18:21:48.101 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-29 18:21:48.104 -04:00 [INF] Hosting environment: Development
+2022-09-29 18:21:48.106 -04:00 [INF] Content root path: C:\Users\Admin\Downloads\section7\9_logging\after\Demo\
+2022-09-29 18:21:50.102 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/index.html - -
+2022-09-29 18:21:51.115 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/index.html - - - 200 - text/html;charset=utf-8 1023.1030ms
+2022-09-29 18:21:52.606 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - -
+2022-09-29 18:21:52.614 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - - - 200 11978 application/javascript;+charset=utf-8 7.4503ms
+2022-09-29 18:21:53.163 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - -
+2022-09-29 18:21:53.407 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 244.0191ms
+2022-09-29 18:22:04.090 -04:00 [INF] Request starting HTTP/1.1 GET https://localhost:7167/api/Users application/json 47
+2022-09-29 18:22:07.557 -04:00 [INF] Entity Framework Core 6.0.9 initialized 'DataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.9' with options: None
+2022-09-29 18:22:10.722 -04:00 [INF] Executed DbCommand (130ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+2022-09-29 18:22:11.026 -04:00 [INF] Executing endpoint 'Demo.Controllers.UsersController.Get (Demo)'
+2022-09-29 18:22:11.056 -04:00 [INF] Route matched with {action = "Get", controller = "Users"}. Executing controller action with signature System.Collections.Generic.List`1[Entities.User] Get() on controller Demo.Controllers.UsersController (Demo).
+2022-09-29 18:22:33.801 -04:00 [INF] Get action called
+2022-09-29 18:22:33.815 -04:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Username]
+FROM [Users] AS [u]
+2022-09-29 18:22:33.831 -04:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Entities.User, Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-09-29 18:22:33.864 -04:00 [INF] Executed action Demo.Controllers.UsersController.Get (Demo) in 22792.0507ms
+2022-09-29 18:22:33.867 -04:00 [INF] Executed endpoint 'Demo.Controllers.UsersController.Get (Demo)'
+2022-09-29 18:22:33.879 -04:00 [INF] Request finished HTTP/1.1 GET https://localhost:7167/api/Users application/json 47 - 200 - application/json;+charset=utf-8 29788.5420ms

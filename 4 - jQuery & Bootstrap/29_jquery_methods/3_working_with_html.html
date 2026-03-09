@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I am the page title</title>
+    <!-- using CDN jquery file -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <p id="intro1">Finding HTML Elements by Id</p>
+    <p>getElementsByTagName will select this tag</p>
+    <p id="intro2">getElementsByClassName will select this tag</p>
+    <p id="intro3">Hello World!.</p>
+    <p id="intro4">This example demonstrates the <b>querySelectorAll</b> method.</p>
+
+
+    <p id="toggleEx">This example demonstrates the <b>querySelectorAll</b> method.</p>
+
+
+    <script>
+        $(document).ready(function () {
+
+            $("#intro1").html("content updated by html method");
+            $("#intro2").text("content updated by text method");
+
+            // get content
+            console.log($("#intro1").html())
+            console.log($("#intro2").text())
+
+            $("#intro3").remove();
+
+            $("#intro4").append("I am added using jquery");
+
+        });
+    </script>
+</body>
+
+</html>

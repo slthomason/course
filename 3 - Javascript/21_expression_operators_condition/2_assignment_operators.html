@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const val = 0;
+        let age = val;
+
+        const foo = ['one', 'two', 'three'];
+        const foo2 = [1, 2, 3];
+
+        //Array Destructuring
+        // without Destructuring
+        const one = foo[0];
+        const two = foo[1];
+        const three = foo[2];
+
+        // with Destructuring
+        const [one_d, two_d, three_d] = foo;
+        console.log(one_d, two_d, three_d)
+
+        // object  Destructuring 
+        const obj = {
+            a: 1,
+            b: 2
+        };
+
+        const {
+            a,
+            b
+        } = obj;
+        console.log(a, b);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

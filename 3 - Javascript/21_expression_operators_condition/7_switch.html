@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // swith without break statement
+        let day;
+        let test = 2;
+        switch (test) {
+            case 0:
+                day = "Sunday";
+            case 1:
+                day = "Monday";
+            case 2:
+                day = "Tuesday";
+            case 3:
+                day = "Wednesday";
+            case 4:
+                day = "Thursday";
+            case 5:
+                day = "Friday";
+            case 6:
+                day = "Saturday";
+        }
+
+        console.log("the day will always be Saturday. " + day);
+
+        // switch with  break statement
+        test = 3;
+        switch (test) {
+            case 0:
+                day = "Sunday";
+                break;
+            case 1:
+                day = "Monday";
+                break;
+            case 2:
+                day = "Tuesday";
+                break;
+            case 3:
+                day = "Wednesday";
+                break;
+            case 4:
+                day = "Thursday";
+                break;
+            case 5:
+                day = "Friday";
+                break;
+            case 6:
+                day = "Saturday";
+                break;
+        }
+        console.log("With break statement.Today is " + day);
+
+
+        // switch with default case
+        test = 77;
+        switch (test) {
+            case 0:
+                day = "Sunday";
+                break;
+            case 1:
+                day = "Monday";
+                break;
+            case 2:
+                day = "Tuesday";
+                break;
+            case 3:
+                day = "Wednesday";
+                break;
+            case 4:
+                day = "Thursday";
+                break;
+            case 5:
+                day = "Friday";
+                break;
+            case 6:
+                day = "Saturday";
+                break;
+            default:
+                console.log("invalid input");
+        }
+
+        //common code block
+        var text = "";
+        test = 4;
+        switch (test) {
+            case 4:
+            case 5:
+                text = "Soon it is Weekend";
+                break;
+            case 0:
+            case 6:
+                text = "It is Weekend";
+                break;
+            default:
+                text = "Looking forward to the Weekend";
+        }
+
+        console.log(text)
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

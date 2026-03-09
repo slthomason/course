@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a[target] {
+            background-color: yellow;
+        }
+
+        a[target="_blank"] {
+            background-color: purple;
+        }
+
+
+        [title~=start] {
+            border: 5px solid yellow;
+        }
+
+        p[class|=top] {
+            background: yellow;
+        }
+
+        p[class^="down"] {
+            background: paleturquoise;
+        }
+
+        div[class$="test"] {
+            background: pink;
+        }
+
+        .star_example [class*="test"] {
+            background: fuchsia;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>CSS [attribute] Selector</h2>
+
+    <a href="https://www.startuphakk.com/">https://www.startuphakk.com/</a><br />
+    <a href="https://www.startuphakk.com/" target="_blank">https://www.startuphakk.com/</a><br />
+    <a href="https://www.startuphakk.com/" target="_top">https://www.startuphakk.com/</a> <br />
+
+    <img src="startup_hakk_logo.png" title="start" width="150" height="113">
+    <img src="startup_hakk_logo.png" title="startup hakk" width="224" height="162">
+    <img src="startup_hakk_logo.png" title="logo" width="200" height="358">
+
+    <p class="top-header">Welcome</p>
+    <p class="top-text">Hello world!</p>
+    <p class="topcontent">Are you learning CSS?</p>
+
+    <p class="down-header">Welcome</p>
+    <p class="down-text">Hello world!</p>
+    <p class="downcontent">Are you learning CSS?</p>
+
+    <div>
+        <div class="first_test">The first div element.</div>
+        <div class="second">The second div element.</div>
+        <div class="my-test">The third div element.</div>
+        <div class="mytest">This is some text in a paragraph.</div>
+    </div>
+
+    <div class="star_example">
+        <div class="first_test">The first div element.</div>
+        <div class="second">The second div element.</div>
+        <div class="my-test">The third div element.</div>
+        <div class="mytest">This is some text in a paragraph.</div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body onload="alert('body loaded')">
+
+    <h2>JavaScript HTML Events</h2>
+    <h2 onclick="this.innerHTML='Ooops!'">Click on this text!</h2>
+
+    <h1 onclick="changeText(this)">Click on this text!</h1>
+    <!-- on click event attached by attribute example. Related js code at line 42  -->
+    <button id="myBtn">Increment 1+</button>
+    <p id="totalClicks">0</p>
+
+    <!-- on change example -->
+    <input type="text" id="fname" onchange="updateeSpan()">
+    <span id="typedValue"></span>
+
+    <!-- mouse over and mouse out example -->
+    <div onmouseover="mOver(this)" onmouseout="mOut(this)">Mouse Over Me</div>
+
+    <script>
+        function changeText(id) {
+            id.innerHTML = "Ooops 2!";
+        }
+
+        function updateeSpan(id) {
+           document.getElementById("typedValue").innerText = document.getElementById("fname").value;
+        }
+
+        function IncrementValue() {
+            document.getElementById("totalClicks").innerText = parseInt(
+            document.getElementById("totalClicks").innerText) + 1
+        }
+
+        document.getElementById("myBtn").onclick = IncrementValue;
+
+
+        function mOver(obj) {
+            obj.innerHTML = "Thank You"
+        }
+
+        function mOut(obj) {
+            obj.innerHTML = "Mouse Over Me"
+        }
+    </script>
+</body>
+
+</html>

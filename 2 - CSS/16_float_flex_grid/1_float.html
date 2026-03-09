@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #menu ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        #menu li {
+            float: left;
+        }
+
+        #menu li a {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        #menu li a:hover {
+            background-color: #111;
+        }
+
+        #clear_in_action img {
+            float: left;
+        }
+
+        #clear_in_action p.clear {
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="background-color:azure;height: 500px;">
+        <p>In this example, the image will float to the right in the text, and the text in the paragraph will wrap
+            around the image.</p>
+
+        <p><img src="channels4_profile.jpg" alt="channels4_profile"
+                style="width:170px;height:170px;margin-left:15px;float: right;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi
+            lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue
+            eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare
+            eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis
+            dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare
+            turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed
+            dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.</p>
+    </div>
+    <div style="background-color:cornflowerblue;height: 500px">
+        <p>In this example, the image will float to the left in the text, and the text in the paragraph will wrap around
+            the
+            image.</p>
+
+        <p><img src="channels4_profile.jpg" alt="channels4_profile"
+                style="width:170px;height:170px;margin-right:15px;float: left;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi
+            lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue
+            eget,
+            auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu,
+            lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum
+            nisi,
+            sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae
+            dui
+            eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor
+            porta. Cras ac leo purus. Mauris quis diam velit.</p>
+    </div>
+    <div style="background-color:antiquewhite;height: 500px">
+        <p>In this example, the image will be displayed just where it occurs in the text (float: none;).</p>
+
+        <p><img src="channels4_profile.jpg" alt="channels4_profile" style="width:170px;height:170px;float: none;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi
+            lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue
+            eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare
+            eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis
+            dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare
+            turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed
+            dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.</p>
+    </div>
+    <div>
+        <p><span
+                style="float: left;width: 0.7em;  font-size: 400%;  font-family: algerian, courier;  line-height: 80%;">T</span>his
+            is some text.
+            This is some text. This is some text.
+            This is some text. This is some text. This is some text.
+            This is some text. This is some text. This is some text.
+            This is some text. This is some text. This is some text.
+            This is some text. This is some text. This is some text.
+            This is some text. This is some text. This is some text.
+            This is some text. This is some text. This is some text.
+        </p>
+
+        <p>In the paragraph above, the first letter of the text is embedded in a span element. The span element has a
+            width that is 0.7 times the size of the current font. The font-size of the span element is 400% (quite
+            large) and the line-height is 80%. The font of the letter in the span will be in "Algerian".</p>
+    </div>
+    <!-- Use float with a list of hyperlinks to create a horizontal menu: -->
+    <div id="menu">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+    </div>
+
+    <div id="clear_in_action">
+        <img src="channels4_profile.jpg" width="100" height="132">
+        <p>This is some text. This is some text. This is some text. This is some text. This is some text. This is some
+            text.</p>
+        <p class="clear">This is also some text. This is also some text. This is also some text. This is also some text.
+            This is also some text. This is also some text.</p>
+        <p><strong>Remove the "clear" class to see the effect.</strong></p>
+    </div>
+
+</body>
+
+</html>

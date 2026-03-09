@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Git User List</h1>
+    <ul id="gitusrList">
+
+    </ul>
+    <script>
+        fetch("https://api.github.com/users", {
+                method: 'get'
+            })
+            .then(async (response) => await response.json())
+            .then(async (response) => {
+                html = "";
+                console.log(response);
+                response.forEach(x => {
+                    html += '<li>' + x.login + ' ' + x.id + '</li>'
+                })
+                document.getElementById("gitusrList").innerHTML = html;
+
+            });
+    </script>
+</body>
+
+</html>

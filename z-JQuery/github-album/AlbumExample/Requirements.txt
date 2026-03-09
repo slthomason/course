@@ -1,0 +1,8 @@
+Use bootstrap compoments to design the Assignment 2.png.
+
+Feel free to write custom css rules to make sure have pixel perfect layout.
+
+Then use jQuery ajax to use git api and render the images, name, any other possible description in the bootstrap cards
+user should be able to see only 20 user at the time
+Use the paging compoment to make sure user is able to see all the git user.
+
