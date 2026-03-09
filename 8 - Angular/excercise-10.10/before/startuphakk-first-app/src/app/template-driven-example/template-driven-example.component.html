@@ -1,0 +1,57 @@
+<h1>Template Driven</h1>
+<div class="container">
+    <form novalidate (ngSubmit)="onSubmit()" #myform="ngForm">
+        <fieldset>
+            <div class="form-group">
+                <label>First Name</label>
+                <input type="text" class="form-control" [(ngModel)]="formObj.firstName"
+                 name="firstName" #firstName="ngModel" required>
+          
+                <div *ngIf="firstName.invalid" class="error"> 
+                    Please Enter first name
+                </div>
+          
+            </div>
+            <div class="form-group">
+                <label>Last Name</label>
+                <input type="text" [(ngModel)]="formObj.lastName" required class="form-control" name="lastName" #lastName="ngModel">
+                <div *ngIf="lastName.invalid" class="error" > 
+                    Please Enter last name
+                </div>
+            </div>
+        </fieldset>
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email" [(ngModel)]="formObj.email" 
+            pattern="[^ @]*@[^ @]*"
+            required class="form-control" name="email" #email="ngModel">
+            <div *ngIf="email.invalid" class="error"> 
+                <div  *ngIf="email.errors?.['required']" > Please Enter email </div>
+                <div  *ngIf="email.errors?.['pattern']"> Please enter valid email  </div>
+            </div>
+            
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" class="form-control" required #password="ngModel" [(ngModel)]="formObj.password" name="password">
+            <div *ngIf="password.invalid" class="error"> 
+                Please Enter password
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Language</label>
+            <select class="form-control" #language="ngModel" required name="language" [(ngModel)]="formObj.language">
+                <option value="">Please select a language</option>
+                <option *ngFor="let lang of langs" [value]="lang">{{lang}}
+                </option>
+            </select>
+            <div *ngIf="language.invalid" class="error"> 
+                Please Enter Language
+            </div>
+        </div>
+
+        <button type="submit" [disabled]="myform.invalid" class="btn btn-primary">Submit
+        </button>
+
+    </form>
+</div>
