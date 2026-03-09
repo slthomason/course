@@ -1,0 +1,21 @@
+<h1>Employee Template-Driven Form</h1> 
+<!-- Form declaration with Angular's template-driven form. The form is bound to the onSubmit method. -->
+<form (ngSubmit)="onSubmit(employeeForm)" #employeeForm="ngForm" class="employee-form">
+    <div class="form-group">
+        <!-- Input field for the employee's name, bound to ngModel for two-way data binding -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" ngModel required> <!-- ngModel binds the input value to the form data -->
+    </div>
+    <div class="form-group">
+        <!-- Input field for the employee's age, bound to ngModel for two-way data binding -->
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" ngModel required> <!-- ngModel binds the input value to the form data -->
+    </div>
+    <div class="form-group">
+        <!-- Input field for the employee's email, bound to ngModel for two-way data binding -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" ngModel required> <!-- ngModel binds the input value to the form data -->
+    </div>
+    <!-- Submit button, which is disabled until the form is valid (i.e., all fields are filled in) -->
+    <button type="submit" [disabled]="!employeeForm.valid">Submit</button>
+</form>

@@ -1,0 +1,13 @@
+create the stored procedure named as "getUserOrderDetailsByUserName"
+
+It should take customer name's any of three letters and should fetch
+
+    1.userId
+    2.customerName
+    3.phoneNumber
+    4.orderId
+    5.noOfProductsOrdered
+    6.totalOrderPrice
+    7.highestProductPrice
+
+Note: You should use the Joins, Group By and temporary tables to fetch the record in chunks.

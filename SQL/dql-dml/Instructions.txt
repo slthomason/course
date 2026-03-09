@@ -1,0 +1,53 @@
+
+create database with name restaurant;
+create a table 'categories'
+    1. It must have Primary KEY
+    2. It must have catId as Index;
+    3. Id must be generated on auto increment;
+
+"Fast Food"
+"Burger"
+"Pizza"
+"Roasted"
+"Drinks"
+"Italian"
+
+create a table 'categories'
+    1. It must have Primary KEY
+    2. It must have productId as Index;
+    3. It must be generated on auto increment;
+    4. It must have catId as foreign key;
+
+'Fish',20.5,1
+'Chips',10.5,1
+'Sandwiches',10.5,1
+
+'Turkey burger',50.5,2;
+'Veggie burger',25.5,2;
+'Bean burger',30.5,2;
+
+'Chicago Deep-Dish Pizza',10.5,3;
+'New York-style Pizza.',5.5,3;
+'Detroit-style Pizza.',45.5,3;
+
+'Roasted Potatoes',5.1,4;
+'Roasted Butternut Squash',4.56,4;
+'Roasted Chicken',60.5,4;
+
+'Coke',2.5,5;
+'Pepsi',2.5,5;
+'Mint Margarita',3.2,5;
+
+'Spaghetti',10.5,6;
+'Risotto',15.5,6;
+'Polenta',12.5,6;
+
+
+1. Select category that matches from the search
+    i. bur (should match from the start)
+    ii. za (should match from end )
+
+2. Select the products having price between 5 & 20
+3. Select the average price of products having catId = 1;
+4. Update the Product and set the Price to 90 that has catId = 1;
+5. Delete from products table that has catId = 6;

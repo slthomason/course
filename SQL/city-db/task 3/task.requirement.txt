@@ -1,0 +1,5 @@
+Task 1 create table city
+Task 2 insert data in city from task.data.txt
+
+Task3: Query the average population for all cities in CITY, rounded down to the nearest integer.
+
