@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I am the page title</title>
+    <style>
+        #frm1 {
+            display: none;
+        }
+    </style>
+
+    <!-- using CDN jquery file -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <p id="intro">Finding HTML Elements by Id</p>
+    <p>getElementsByTagName will select this tag</p>
+    <p class="intro">getElementsByClassName will select this tag</p>
+    <p class="intro">Hello World!.</p>
+    <p class="intro">This example demonstrates the <b>querySelectorAll</b> method.</p>
+
+
+    <p id="toggleEx">This example demonstrates the <b>querySelectorAll</b> method.</p>
+
+    <form id="frm1">
+        First name: <input type="text" id="fname" name="fname" value="Donald"><br>
+        Last name: <input type="text" name="lname" value="Duck"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <div id="div1" style="width:80px;height:80px;display:none;background-color:red;"></div><br>
+    <div id="div2" style="width:80px;height:80px;display:none;background-color:green;"></div><br>
+    <div id="div3" style="width:80px;height:80px;display:none;background-color:blue;"></div>
+
+    <script>
+        $(document).ready(function () {
+            // it will hide all the element with the class intro
+
+            setTimeout(function () {
+                $(".intro").hide();
+                $("#frm1").show();
+            }, 2000)
+
+            setTimeout(function () {
+                $(".intro").show();
+                $("#frm1").hide();
+            }, 5000)
+
+            setTimeout(function () {
+                $("#div1").fadeIn();
+                $("#div2").fadeIn("slow");
+                $("#div3").fadeIn(3000);
+            }, 8000)
+
+            setInterval(function () {
+                 console.log("first")
+                $("#toggleEx").toggle();
+            }, 2000)
+
+
+
+        });
+    </script>
+</body>
+
+</html>

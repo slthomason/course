@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .color-red {
+            color: red;
+        }
+        .color-pink {
+            color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="p1" class="color-red">Hello World!</p>
+    <p id="p2">Hello World!</p>
+
+    <button onclick="changeP1CSS()">Change CSS</button>
+
+    <script>
+        document.getElementById("p2").style.color = "blue";
+        document.getElementById("p2").style.fontFamily = "Arial";
+        document.getElementById("p2").style.fontSize = "larger";
+
+        function changeP1CSS() {
+            // remove the existing class
+            document.getElementById("p1").classList.remove("color-red");
+            // add new class
+            document.getElementById("p1").classList.add("color-pink");
+        }
+    </script>
+</body>
+
+</html>

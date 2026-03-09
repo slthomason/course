@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h2>JavaScript Event Listener</h2>
+    
+    <!-- on click event attached by attribute example  -->
+    <button id="myBtn">Increment 1+</button>
+    <p id="totalClicks">0</p>
+
+    <!-- on change example -->
+    <input type="text" id="fname">
+    <span id="typedValue"></span>
+
+    <!-- mouse over and mouse out example -->
+    <div id="mouseExample">Mouse Over Me</div>
+
+    <script>
+        document.addEventListener("load", function () {
+            alert('body loaded');
+        });
+
+        document.getElementById("myBtn").addEventListener("click", 
+            function changeText(id) {
+                document.getElementById("totalClicks").innerText = 
+                    parseInt(document.getElementById("totalClicks").innerText) + 1;
+            });
+
+        document.getElementById("fname").addEventListener("change", 
+            function changeText(id) {
+                document.getElementById("typedValue").innerText = document.getElementById("fname").value;
+        });
+
+        document.getElementById("mouseExample").addEventListener("mouseover", 
+            function() {
+                this.innerHTML = "Thank You"
+            });
+        document.getElementById("mouseExample").addEventListener("mouseout", 
+            function() {
+                this.innerHTML = "Mouse Over Me"
+            });
+    </script>
+</body>
+
+</html>

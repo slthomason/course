@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var isSystemWorking = true;
+
+        // same example as we workeed in promise
+        let myPromise = new Promise(function (myResolve, myReject) {
+            // code that will take time
+            let myPromise = new Promise(function (resolve) {
+                if (isSystemWorking) {
+                    setTimeout(function () {
+                        myResolve("I love You !!"); //call this when successful
+                    }, 3000);
+                } else {
+                    myReject(); // call this when error
+                }
+
+            });
+
+        });
+
+        myPromise.then(
+            function (value) {
+                console.log(value);
+                /* code if successful */
+            },
+            function (error) {
+                /* code if some error */
+            }
+        );
+
+        // handle promise with await and async
+        var asyncronousMethod = () => {
+            return new Promise(function (myResolve, myReject) {
+                // code that will take time
+                let myPromise = new Promise(function (resolve) {
+                    if (isSystemWorking) {
+                        setTimeout(function () {
+                            myResolve("I love You !!"); //call this when successful
+                        }, 3000);
+                    } else {
+                        myReject(); // call this when error
+                    }
+
+                });
+
+            });
+
+        }
+        async function callAsncMethod() {
+            console.log(await asyncronousMethod())
+        }
+        callAsncMethod();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

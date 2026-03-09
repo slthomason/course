@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>JavaScript Window</h2>
+
+    <p id="demo"></p>
+    <button onclick="window.open('https://startuphakk.com', 'startuphakk');">Open Startuphakk</button>
+    <button
+        onclick="window.open('https://startuphakk.com', 'startuphakk','left=100,top=100,width=320,height=320');">Open
+        Startuphakk with features
+    </button>
+
+    <button id="windowCloseOption"
+        onclick="window.open('https://startuphakk.com', 'startuphakk','left=100,top=100,width=320,height=320');">Open
+        Startuphakk with features
+    </button>
+
+
+    <script>
+        let windowObjectReference = null; // global variable
+        // moveTo example
+        setTimeout(function () {
+            console.log("move to")
+            window.moveTo(50, 50);
+        }, 5000)
+
+        // resizeTo example
+        setTimeout(function () {
+            console.log("resizeto")
+            window.resizeTo(500, 500);
+        }, 8000)
+
+        const link = document.querySelector("#windowCloseOption");
+        link.addEventListener("click", (event) => {
+            windowObjectReference =
+                window.open('file:///C:/course/Section1/26_bom/1_window_object.html',
+                    'startuphakk', 'left=100,top=100,width=320,height=320');
+
+
+
+            // resizeTo close
+            setTimeout(function () {
+                console.log("resizeto")
+                windowObjectReference.resizeTo(500, 500);
+            }, 3000)
+
+
+            setTimeout(function () {
+                windowObjectReference.close();
+            }, 8000)
+        }, false);
+
+        document.getElementById("demo").innerHTML =
+            "Browser inner window width: " + window.innerWidth + "px<br>" +
+            "Browser inner window height: " + window.innerHeight + "px";
+    </script>
+    </script>
+</body>
+
+</html>

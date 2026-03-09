@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* unvisited link */
+        a#activePara:link {
+            color: green;
+        }
+
+        /* visited link */
+        a#activePara:visited {
+            color: orange;
+        }
+
+        /* mouse over link */
+        a#activePara:hover {
+            color: red;
+        }
+
+        /* selected link */
+        a#activePara:active {
+            color: yellow;
+        }
+
+        input[type=text]:enabled {
+            background: #ffff00;
+        }
+
+        input[type=text]:disabled {
+            background: #dddddd;
+        }
+
+        #first_child_example p:first-child {
+            background-color: yellow;
+        }
+
+        #first_of_type_example p:first-of-type {
+            background: red;
+        }
+
+        #email_focus:focus {
+            background: purple;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Mouse over and click the link: <a id="activePara" href="https://www.startuphakk.com/">StartUp Hakk</a></p>
+
+    <form id="#">
+        First name: <input type="text" value="Spencer"><br>
+        Last name: <input type="text" disabled value="Thomson"><br>
+        Email: <input type="text" id="email_focus" value="sp@mgial.com"><br>
+    </form>
+
+
+    <div id="first_child_example">
+        <p>This paragraph is the first child of its parent (body).</p>
+        <p>This paragraph is not the first child of its parent (body).</p>
+
+        <div>
+            <p>This paragraph is the first child of its parent (div).</p>
+            <p>This paragraph is not the first child of its parent (div).</p>
+        </div>
+    </div>
+
+    <div id="first_of_type_example">
+        <p>The first paragraph.</p>
+        <p>The second paragraph.</p>
+        <p>The third paragraph.</p>
+        <p>The fourth paragraph.</p>
+    </div>
+</body>
+
+</html>

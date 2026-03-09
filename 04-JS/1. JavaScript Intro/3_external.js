@@ -1,0 +1,1 @@
+document.body.innerHTML = '<h1>This is exteral JS example </h1>';

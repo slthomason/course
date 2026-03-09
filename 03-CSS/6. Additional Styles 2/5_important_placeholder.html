@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .example-1 #myid1 {
+            background-color: blue;
+        }
+
+        .example-1 .myclass {
+            background-color: gray;
+        }
+
+        .example-1 p {
+            background-color: red !important;
+        }
+
+        .example-2 #myid2 {
+            background-color: blue !important;
+        }
+
+        .example-2 .myclass {
+            background-color: gray !important;
+        }
+
+        .example-2 p {
+            background-color: red !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="example-1">
+        <p>This is some text in a paragraph. example-1</p>
+        <p class="myclass">This is some text in a paragraph. example-1</p>
+        <p id="myid1">This is some text in a paragraph. example-1</p>
+    </div>
+    <div class="example-2">
+        <p>This is some text in a paragraph. example-2</p>
+
+        <p class="myclass">This is some text in a paragraph. example-2</p>
+
+        <p id="myid2">This is some text in a paragraph. example-2</p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .inline {
+            display: inline;
+        }
+
+        .block {
+            display: block;
+        }
+
+        .display_none {
+            display: none;
+        }
+
+        .display_inline_block {
+            display: inline-block;
+        }
+
+        h1.hidden {
+            visibility: hidden;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Making Block element as inline</h1>
+    <div>
+        <div>
+            Making
+        </div>
+        <div>
+            Block
+        </div>
+        <div>
+            element
+        </div>
+        <div>
+            as
+        </div>
+        <div>
+
+            inline
+        </div>
+    </div>
+    <hr>
+    <div>
+        <div class="inline-div">
+            Making
+        </div>
+        <div class="inline-div">
+            Block
+        </div>
+        <div class="inline-div">
+            element
+        </div>
+        <div class="inline-div">
+            as
+        </div>
+        <div class="inline-div">
+            inline
+        </div>
+    </div>
+    <h1 class="display_none">This is a display hidden heading. it wouldn't take space</h1>
+    <h1>This is a visible heading</h1>
+    <h1 class="hidden">This is a hidden heading. it will take space</h1>
+    <p>Notice that the hidden heading still <span class="display_inline_block"
+            style="border: 1px solid gray;">takes</span> up
+        <span "border: 1px solid gray;">space</span> .</p>
+
+</body>
+
+</html>

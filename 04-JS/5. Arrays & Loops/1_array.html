@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // Creating an Array 
+        const cars = ["Saab", "Volvo", "BMW"];
+
+        const cars2 = [
+            "Saab",
+            "Volvo",
+            "BMW"
+        ];
+
+        const cars3 = [];
+        cars[0] = "Saab";
+        cars[1] = "Volvo";
+        cars[2] = "BMW";
+
+        const cars4 = new Array("Saab", "Volvo", "BMW");
+        // pushing new element to array
+        cars.push("Jeep");
+
+        // accessing array
+        let car = cars[0];
+
+        console.log(cars);
+
+        // changing array element
+        cars[0] = "Opel";
+
+        // Access the Full Array
+        console.log(cars);
+
+        // get total elements in array 
+        console.log(cars.length);
+
+        cars.push("Tesla");
+
+        console.log(cars.length);
+        
+        console.log(cars[cars.length]);
+        console.log(cars[5]);
+
+        
+        // accessing last Element
+        console.log(cars[4]);
+        console.log(cars[cars.length - 1]);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

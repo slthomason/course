@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="p1"><span>Hello</span> World!</p>
+
+    <script>
+        // In JavaScript, document.write() can be used to write directly to the HTML output stream:
+        document.write("this content will be printed between p1 and p2")
+    </script>
+    <p id="p2"><span>Hello</span> World!</p>
+
+    <img id="myImage" src="channels1_profile.jpg">
+    updated image source
+    <img id="myImage1" src="channels1_profile.jpg">
+
+    <form name="myForm">
+        Name: <input type="text" id="name" name="fname" value="Spencer">
+        Hobbies <input type="checkbox" id="hobbies" value="FootBall" checked>
+        Gendere <input type="radio" id="gender" value="Male">
+    </form>
+    <script>
+        console.log(document.getElementById("p1").innerHTML);
+        console.log(document.getElementById("p1").innerText);
+        document.getElementById("p1").innerHTML = "<strong>New </strong>text!";
+        document.getElementById("p2").innerText = "<strong>New</strong> text!";
+
+
+        // changing the attribute
+        document.getElementById("myImage1").src = "channels4_profile.jpg";
+        console.log(document.getElementById("name").value)
+
+        document.getElementById("name").value = "Spencer Thomason"
+
+        console.log(document.getElementById("hobbies").checked)
+        console.log(document.getElementById("gender").checked)
+    </script>
+</body>
+
+</html>

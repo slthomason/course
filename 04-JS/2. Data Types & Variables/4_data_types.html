@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let length = 16; // Number
+        let lastName = "Johnson"; // String
+        let x = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 45
+        }; // Object
+        debugger;        
+        console.log(x);
+
+        // Note:When adding a number and a string, JavaScript will treat the number as a string.
+        let sumOf = 16 + "Volvo"; // sumOf will have value '16Volvo'
+        console.log(sumOf);
+        /*Note: JavaScript evaluates expressions from left to right. 
+        Different sequences can produce different results: */
+        let sumOf2 = 16 + 4 + "Volvo"; // output: 20Volvo
+        console.log(sumOf2);
+        sumOf2 = 16 + "Volvo" + 4; // output: 16Volvo4
+        console.log(sumOf2);
+
+
+        // Note: JavaScript Types are Dynamic
+        let age; // Now age is undefined
+        console.log(age);
+        age = 5; // Now age is a Number
+        console.log(age);
+        age = "five"; // Now age is a String
+        console.log(age);     
+
+        //strings
+
+        let answer1 = "It's alright"; // Single quote inside double quotes
+        console.log(answer1);
+        let answer2 = "He is called 'Johnny'"; // Single quotes inside double quotes
+        console.log(answer2);
+        let answer3 = 'He is called "Johnny"'; // Double quotes inside single quotes
+        console.log(answer3);
+
+        // numbers
+
+        let x1 = 34.00; // Written with decimals
+        let x2 = 34; // Written without decimals
+
+        let x3 = 123e5; // 12300000
+        let x4 = 123e-5; // 0.00123
+
+        // booleans
+
+        var isUserActive = true;
+        var isValidAge = false;
+
+        // use of parentheses
+        var wrongAvgWage = 10 + 5 + 45 + 20 + 69 / 5; // this will calculate wrong output
+        var correctAvgWage = (10 + 5 + 45 + 20 + 69) / 5; // this will calculate wrong output
+
+        // we can store null or undefined in any variable/object 
+        wrongAvgWage = null;
+        correctAvgWage = undefined;
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // Create a single object, using an object literal.
+        const person = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 50,
+            eyeColor: "blue"
+        };
+        // Create a single object, with the keyword new.
+        const person2 = new Object();
+        person.firstName = "John";
+        person.lastName = "Doe";
+        person.age = 50;
+        person.eyeColor = "blue";
+
+        // Objects are mutable: They are addressed by reference, not by value.
+        const x = person; // Will not create a copy of person.
+        x.age = 10; // Will change both x.age and person.age
+
+        // Accessing JavaScript Properties
+        // Example 1
+        console.log(person.firstName + " is " + person.age + " years old.");
+        // Example 1
+        console.log(person["firstName"] + " is " + person["age"] + " years old.");
+
+        // with for loop
+
+        for (let x in person) {
+            console.log(x + " is " + person[x]);
+        }
+
+
+        // Adding New Properties
+        person.nationality = "English";
+
+        // Deleting Properties
+        // Example 1
+        delete person.age;
+        // Example 2
+        delete person["nationality"];
+
+
+        // Nested Objects
+        var myObj = {
+            name: "John",
+            age: 30,
+            cars: {
+                car1: "Ford",
+                car2: "BMW",
+                car3: "Fiat"
+            }
+        }
+
+        // access nested property
+        console.log(myObj.cars.car2);
+
+        // Nested Arrays and Objects
+        const myObj1 = {
+            name: "John",
+            age: 30,
+            cars: [{
+                    name: "Ford",
+                    models: ["Fiesta", "Focus", "Mustang"]
+                },
+                {
+                    name: "BMW",
+                    models: ["320", "X3", "X5"]
+                },
+                {
+                    name: "Fiat",
+                    models: ["500", "Panda"]
+                }
+            ]
+        }
+
+        // Methods in objects
+        const personWithMethods = {
+            firstName: "John",
+            lastName: "Doe",
+            id: 5566,
+            printMessage: function () {
+                console.log("Hello world!");
+            }
+        };
+        personWithMethods.printMessage();
+
+        // example of this keyword within the method
+        const personWithThisKeyword = {
+            firstName: "John",
+            lastName: "Doe",
+            id: 5566,
+            fullName: function () {
+                return this.firstName + " " + this.lastName;
+            }
+        };
+
+        // accessing the method 
+        console.log(personWithThisKeyword.fullName());
+
+        // Adding a Method to an Object
+        personWithThisKeyword.getFullName = function () {
+            return this.firstName + " " + this.lastName;
+        };
+
+        console.log(personWithThisKeyword.getFullName());
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

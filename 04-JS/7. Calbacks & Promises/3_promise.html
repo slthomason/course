@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var isSystemWorking = true;
+        let myPromise = new Promise(function (myResolve, myReject) {
+            // code that will take time
+            let myPromise = new Promise(function (resolve) {
+                if (isSystemWorking) {
+                    setTimeout(function () {
+                        myResolve("I love You !!"); //call this when successful
+                    }, 3000);
+                } else {
+                    myReject(); // call this when error
+                }
+
+            });
+
+        });
+
+        myPromise.then(
+            function (value) {
+                console.log(value);
+                /* code if successful */
+            },
+            function (error) {
+                /* code if some error */
+            }
+        );
+
+        //example catch and  finally
+        let myPromise2 = new Promise(function (myResolve, myReject) {
+            // code that will take time
+            let myPromise = new Promise(function (resolve) {
+                if (isSystemWorking) {
+                    setTimeout(function () {
+                        myResolve("I love You !!"); //call this when successful
+                    }, 3000);
+                } else {
+                    myReject(); // call this when error
+                }
+
+            });
+        });
+
+        myPromise2.then(
+            function (value) {
+                /* code if successful */
+                console.log(value);
+            },
+
+        ).catch(function (error) {
+            /* code if some error */
+        }).finally(function (error) {
+            /* will be called defininatly */
+        });
+
+
+        //example Chained Promises
+        let myPromise3 = new Promise(function (myResolve, myReject) {
+            // code that will take time
+            let myPromise = new Promise(function (resolve) {
+                if (isSystemWorking) {
+                    setTimeout(function () {
+                        myResolve("I love You !!"); //call this when successful
+                    }, 3000);
+                } else {
+                    myReject(); // call this when error
+                }
+
+            });
+        });
+
+
+
+        myPromise3
+            .then(
+                function (value) {
+                    /* code if successful */
+                    console.log(value);
+                },
+
+            ) // success method one
+            .then(
+                function (value) {
+                    /* code if successful */
+                    console.log(value);
+                },
+
+            ) // success method two
+            .catch(function (error) {
+                /* code if some error */
+            })
+            .finally(function (error) {
+                /* will be called defininatly */
+            });
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

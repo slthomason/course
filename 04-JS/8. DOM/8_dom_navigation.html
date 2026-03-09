@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>This is header tag</h1>
+
+    <p>
+        According to the W3C HTML DOM standard, everything in an HTML document is a node:
+        <ul id="demo">
+            <li>
+                <span>The entire document</span> 
+                is a document node
+            </li>
+            <li>Every HTML element is an element node</li>
+            <li>The text inside HTML elements are text nodes</li>
+            <li>Every HTML attribute is an attribute node (deprecated)</li>
+            <li>All comments are comment nodes</li>
+        </ul>
+    </p>
+
+    <script>
+        console.log(document.querySelector("#demo").firstChild);
+        console.log(document.querySelector("p").firstChild.nodeValue);
+        console.log(document.querySelector("p").firstChild.nodeName);
+        console.log(document.querySelector("p").firstChild.nodeType);
+        console.log(document.querySelector("#demo").lastChild);
+        console.log(document.querySelector("#demo").lastChild.nodeValue);
+        console.log(document.querySelector("#demo").childNodes);
+        console.log(document.querySelector("#demo").childNodes[3].nextSibling);
+        console.log(document.querySelector("#demo").childNodes[3].previousSibling);
+        console.log(document.querySelector("#demo").childNodes[0].parentNode);
+    </script>
+</body>
+
+</html>

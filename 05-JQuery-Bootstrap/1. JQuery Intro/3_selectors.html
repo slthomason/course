@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I am the page title</title>
+    <!-- using CDN jquery file -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <h1 class="intro">Won't be selected on p.intro</h1>
+    <p id="intro">Finding HTML Elements by Id</p>
+    <p>getElementsByTagName will select this tag</p>
+    <p class="intro">getElementsByClassName will select this tag</p>
+    <p class="intro">Hello World!.</p>
+    <p class="intro">This example demonstrates the <b>querySelectorAll</b> method.</p>
+
+    <form id="frm1">
+        First name: <input type="text" id="fname" name="fname" value="Donald"><br>
+        Last name: <input type="text" name="lname" value="Duck"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <script>
+        $(document).ready(function () {
+
+            //  ID
+            console.log($("#intro")[0].innerText);
+
+            //  Tag Name
+            console.log($("p"));
+
+            //  Class Name
+            console.log($(".intro"));
+
+            //  multiple with css selectors
+            console.log($("p.intro"));
+
+            // nested elements
+            console.log($("#frm1 #fname"));
+
+        });
+    </script>
+</body>
+
+</html>
