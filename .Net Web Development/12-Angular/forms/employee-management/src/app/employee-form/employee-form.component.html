@@ -1,0 +1,24 @@
+<h1>Employee Template-Driven Form</h1>
+<form (ngSubmit)="onSubmit(employeeForm)" #employeeForm="ngForm">
+  <div>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" ngModel required>
+  </div>
+  <div>
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" ngModel required>
+  </div>
+  <div>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" ngModel required>
+  </div>
+  <button type="submit" [disabled]="!employeeForm.valid">Submit</button>
+</form>
+
+<!-- Display the submitted data if the form is valid -->
+<div *ngIf="submittedData">
+  <h2>Submitted Employee Data:</h2>
+  <p><strong>Name:</strong> {{ submittedData.name }}</p>
+  <p><strong>Age:</strong> {{ submittedData.age }}</p>
+  <p><strong>Email:</strong> {{ submittedData.email }}</p>
+</div>

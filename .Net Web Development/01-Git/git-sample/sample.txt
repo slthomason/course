@@ -1,0 +1,9 @@
+To understand the git. this is first commit. it have two files. 
+gitignore file -> let the git know which folder/files should not be included in the source control.
+sample file -> it can be code file, doc, excel, txt, images. 
+
+git is rad!
+
+Git lab is one of best
+test 2
+test 3
