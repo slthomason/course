@@ -1,0 +1,30 @@
+<p>directive-example works!</p>
+
+<div [ngClass]="colorfulDiv" [ngStyle]="divStyle">
+    Ng class example {{userName}}
+</div>
+
+<input type="email" [(ngModel)]="userName">
+
+
+<div *ngIf="CanViewDivBlock">
+    Ng if example 
+</div>
+
+<div *ngIf="age > 10">
+    Ng if expression 
+</div>
+
+<ul>
+    <li *ngFor="let hobby of hobbies">{{hobby}}</li>
+</ul>
+
+
+<div [ngSwitch]="ageGroup">
+    <div *ngSwitchCase="'toddler'">toddler</div>
+    <div *ngSwitchCase="'infant'" >infant</div>
+    <div *ngSwitchCase="'teenage'">teenage</div>
+    <div *ngSwitchCase="'adult'" >adult</div>
+    <div *ngSwitchDefault  >No Age Group specified</div>
+</div>
+
