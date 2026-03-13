@@ -1,0 +1,84 @@
+2022-09-28 22:57:57.829 -04:00 [INF] Now listening on: https://localhost:7167
+2022-09-28 22:57:57.934 -04:00 [INF] Now listening on: http://localhost:5167
+2022-09-28 22:57:57.954 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-28 22:57:57.956 -04:00 [INF] Hosting environment: Development
+2022-09-28 22:57:57.957 -04:00 [INF] Content root path: C:\Users\Admin\Downloads\section7\9_logging\after\Demo\
+2022-09-28 22:57:59.479 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/index.html - -
+2022-09-28 22:58:00.234 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/index.html - - - 200 - text/html;charset=utf-8 759.1718ms
+2022-09-28 22:58:00.753 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - -
+2022-09-28 22:58:00.799 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7167/_vs/browserLink - -
+2022-09-28 22:58:00.812 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - - - 200 11978 application/javascript;+charset=utf-8 61.9339ms
+2022-09-28 22:58:01.132 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7167/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 331.9624ms
+2022-09-28 22:58:01.265 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - -
+2022-09-28 22:58:01.662 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 396.6375ms
+2022-09-28 23:01:56.976 -04:00 [INF] Now listening on: https://localhost:7167
+2022-09-28 23:01:57.054 -04:00 [INF] Now listening on: http://localhost:5167
+2022-09-28 23:01:57.064 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-28 23:01:57.066 -04:00 [INF] Hosting environment: Development
+2022-09-28 23:01:57.068 -04:00 [INF] Content root path: C:\Users\Admin\Downloads\section7\9_logging\after\Demo\
+2022-09-28 23:01:58.657 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/index.html - -
+2022-09-28 23:01:59.463 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - -
+2022-09-28 23:01:59.464 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/index.html - - - 200 - text/html;charset=utf-8 735.7998ms
+2022-09-28 23:01:59.536 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7167/_vs/browserLink - -
+2022-09-28 23:01:59.546 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - - - 200 11978 application/javascript;+charset=utf-8 83.0567ms
+2022-09-28 23:01:59.641 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7167/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 104.6435ms
+2022-09-28 23:01:59.965 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - -
+2022-09-28 23:02:00.731 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 765.3539ms
+2022-09-28 23:02:08.301 -04:00 [INF] Request starting HTTP/1.1 GET https://localhost:7167/api/Users application/json 47
+2022-09-28 23:02:12.398 -04:00 [INF] Entity Framework Core 6.0.9 initialized 'DataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.9' with options: None
+2022-09-28 23:02:17.983 -04:00 [INF] Executed DbCommand (469ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+2022-09-28 23:02:18.919 -04:00 [INF] Executing endpoint 'Demo.Controllers.UsersController.Get (Demo)'
+2022-09-28 23:02:18.964 -04:00 [INF] Route matched with {action = "Get", controller = "Users"}. Executing controller action with signature System.Collections.Generic.List`1[Entities.User] Get() on controller Demo.Controllers.UsersController (Demo).
+2022-09-28 23:02:19.125 -04:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Username]
+FROM [Users] AS [u]
+2022-09-28 23:02:19.157 -04:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Entities.User, Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-09-28 23:02:19.355 -04:00 [INF] Executed action Demo.Controllers.UsersController.Get (Demo) in 257.0878ms
+2022-09-28 23:02:19.400 -04:00 [INF] Executed endpoint 'Demo.Controllers.UsersController.Get (Demo)'
+2022-09-28 23:02:19.430 -04:00 [INF] Request finished HTTP/1.1 GET https://localhost:7167/api/Users application/json 47 - 200 - application/json;+charset=utf-8 11129.5294ms
+2022-09-28 23:02:45.155 -04:00 [INF] Request starting HTTP/1.1 GET https://localhost:7167/api/Users application/json 47
+2022-09-28 23:02:45.181 -04:00 [INF] Entity Framework Core 6.0.9 initialized 'DataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.9' with options: None
+2022-09-28 23:02:45.215 -04:00 [INF] Executed DbCommand (22ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+2022-09-28 23:02:45.362 -04:00 [INF] Executing endpoint 'Demo.Controllers.UsersController.Get (Demo)'
+2022-09-28 23:02:45.473 -04:00 [INF] Route matched with {action = "Get", controller = "Users"}. Executing controller action with signature System.Collections.Generic.List`1[Entities.User] Get() on controller Demo.Controllers.UsersController (Demo).
+2022-09-28 23:02:45.499 -04:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Username]
+FROM [Users] AS [u]
+2022-09-28 23:02:45.511 -04:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Entities.User, Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-09-28 23:02:45.561 -04:00 [INF] Executed action Demo.Controllers.UsersController.Get (Demo) in 67.614ms
+2022-09-28 23:02:45.582 -04:00 [INF] Executed endpoint 'Demo.Controllers.UsersController.Get (Demo)'
+2022-09-28 23:02:45.591 -04:00 [INF] Request finished HTTP/1.1 GET https://localhost:7167/api/Users application/json 47 - 200 - application/json;+charset=utf-8 435.7053ms
+2022-09-28 23:03:59.153 -04:00 [INF] Now listening on: https://localhost:7167
+2022-09-28 23:03:59.245 -04:00 [INF] Now listening on: http://localhost:5167
+2022-09-28 23:03:59.256 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-28 23:03:59.258 -04:00 [INF] Hosting environment: Development
+2022-09-28 23:03:59.261 -04:00 [INF] Content root path: C:\Users\Admin\Downloads\section7\9_logging\after\Demo\
+2022-09-28 23:04:01.034 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/index.html - -
+2022-09-28 23:04:01.541 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/index.html - - - 200 - text/html;charset=utf-8 512.1722ms
+2022-09-28 23:04:01.588 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - -
+2022-09-28 23:04:01.593 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7167/_framework/aspnetcore-browser-refresh.js - - - 200 11978 application/javascript;+charset=utf-8 5.4114ms
+2022-09-28 23:04:01.619 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7167/_vs/browserLink - -
+2022-09-28 23:04:01.672 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7167/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 52.7170ms
+2022-09-28 23:04:02.016 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - -
+2022-09-28 23:04:02.255 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7167/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 239.1266ms
+2022-09-28 23:04:13.309 -04:00 [INF] Request starting HTTP/1.1 GET https://localhost:7167/api/Users application/json 47
+2022-09-28 23:04:19.125 -04:00 [INF] Entity Framework Core 6.0.9 initialized 'DataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.9' with options: None
+2022-09-28 23:04:23.235 -04:00 [INF] Executed DbCommand (211ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+2022-09-28 23:04:23.600 -04:00 [INF] Executing endpoint 'Demo.Controllers.UsersController.Get (Demo)'
+2022-09-28 23:04:23.647 -04:00 [INF] Route matched with {action = "Get", controller = "Users"}. Executing controller action with signature System.Collections.Generic.List`1[Entities.User] Get() on controller Demo.Controllers.UsersController (Demo).
+2022-09-28 23:04:23.674 -04:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Username]
+FROM [Users] AS [u]
+2022-09-28 23:04:23.703 -04:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Entities.User, Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-09-28 23:04:23.812 -04:00 [INF] Executed action Demo.Controllers.UsersController.Get (Demo) in 118.6042ms
+2022-09-28 23:04:23.820 -04:00 [INF] Executed endpoint 'Demo.Controllers.UsersController.Get (Demo)'
+2022-09-28 23:04:23.861 -04:00 [INF] Request finished HTTP/1.1 GET https://localhost:7167/api/Users application/json 47 - 200 - application/json;+charset=utf-8 10552.3329ms
